@@ -33,6 +33,8 @@ Do not forget to **run** smoke tests.
 ### Get data 
 From ftp://matuskocka.com/ get all_tycho.tar.gz *9.7G*. 
 
+You need to untar the data `tar -xvzf all_tycho.tar.gz`.
+
 ### Simple color image 
 Unpack your data, enable heasoft and ciao. You can find more info [here](http://cxc.harvard.edu/ciao/threads/combine/).
 
