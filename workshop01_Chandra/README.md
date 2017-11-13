@@ -40,4 +40,13 @@ Lets reproject 5 observations:
 ```
 reproject_obs 10093,10094,10095,10096,10097 merget1/
 ```
-You can find [True color images manual here](http://cxc.harvard.edu/ciao/threads/true_color/). We are going to do similar thing. 
+You can find [True color images manual here](http://cxc.harvard.edu/ciao/threads/true_color/). We are going to do similar thing.
+
+You can cut image from merged events in selected X,Y cord and selected energy bands to mimich RGB colors. 
+```
+dmcopy "merged_evt.fits[energy=200:1500][bin x=3591:4567,y=3619:4603]" soft_img.fits
+dmcopy "merged_evt.fits[energy=1500:2500][bin x=3591:4567,y=3619:4603]" med_img.fits
+dmcopy "merged_evt.fits[energy=2500:10000][bin x=3591:4567,y=3619:4603]" hard_img.fits
+ds9 -rgb -red soft_img.fits -green med_img.fits -blue hard_img.fits
+```
+![DS9 rgb Tycho image](ds9_color.png?raw=true)
